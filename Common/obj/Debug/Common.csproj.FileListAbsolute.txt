@@ -1,6 +1,0 @@
-C:\Users\jehv\source\repos\TestSignalR\Common\bin\Debug\Common.dll
-C:\Users\jehv\source\repos\TestSignalR\Common\bin\Debug\Common.pdb
-C:\Users\jehv\source\repos\TestSignalR\Common\obj\Debug\Common.csprojAssemblyReference.cache
-C:\Users\jehv\source\repos\TestSignalR\Common\obj\Debug\Common.csproj.CoreCompileInputs.cache
-C:\Users\jehv\source\repos\TestSignalR\Common\obj\Debug\Common.dll
-C:\Users\jehv\source\repos\TestSignalR\Common\obj\Debug\Common.pdb
