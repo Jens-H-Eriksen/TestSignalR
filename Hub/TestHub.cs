@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Threading;
 using System.Threading.Tasks;
 using Common;
 using Microsoft.AspNet.SignalR;
@@ -10,6 +11,7 @@ namespace SignalRHub
     [HubName("TestHub")]
     public class TestHub : Hub<ISignalRClientEvents>, ISignalRServerMethods
     {
+        private static int _longMethodCallNo;
         private static int _no;
         
         public override Task OnConnected()
@@ -20,13 +22,13 @@ namespace SignalRHub
         }
 
 
-        public void DetermineLength(string message)
+        public async void DetermineLength(string message)
         {
             Console.WriteLine(message);
 
             List<string> returnMessage = new List<string>();
             returnMessage.Add($@"'{message}' has a length of {message.Length}");
-            Clients.All.ReceiveLength(returnMessage);
+            await Clients.All.ReceiveLength(returnMessage);
         }
 
         public int MakeANumber()
@@ -38,9 +40,10 @@ namespace SignalRHub
 
         public async Task<string> LongRunningMethod()
         {
-            Console.WriteLine("Long running async method called");
+            var callNo = Interlocked.Increment(ref _longMethodCallNo);
+            Console.WriteLine($"Long running async method called ({callNo})");
             await Task.Delay(4000);
-            Console.WriteLine("Long running async method finished");
+            Console.WriteLine($"Long running async method finished ({callNo})");
             return "We're back";
         }
     }

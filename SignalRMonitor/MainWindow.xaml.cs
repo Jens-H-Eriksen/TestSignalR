@@ -79,6 +79,7 @@ namespace SignalRMonitor
             Dispatcher?.BeginInvoke(new Action(() => ReceiveListBox.Items.Add($"You've got number {nr}")));
         }
 
+
         private async void LongRunningButton_Click(object sender, RoutedEventArgs e)
         {
             var msg =  await _testHubProxy.Invoke<string>(SignalR.ServerMethods.LongRunning);

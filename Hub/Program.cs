@@ -30,13 +30,13 @@ namespace SignalRHub
             }
         }
 
-        private static void OnWorkerOnDoWork(object sender, DoWorkEventArgs e)
+        private static async void OnWorkerOnDoWork(object sender, DoWorkEventArgs e)
         {
             while (true)
             {
                 var hubContext = GlobalHost.ConnectionManager.GetHubContext<TestHub, ISignalRClientEvents>();
 
-                hubContext.Clients.All.WatchDogBarked(_bark++);
+                await hubContext.Clients.All.WatchDogBarked(_bark++);
                 Thread.Sleep(1000);
             }
         }

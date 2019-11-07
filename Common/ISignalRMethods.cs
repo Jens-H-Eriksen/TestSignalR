@@ -5,8 +5,8 @@ namespace Common
 {
     public interface ISignalRClientEvents
     {
-        void ReceiveLength(List<string> message);
-        void WatchDogBarked(int barkNo);
+        Task ReceiveLength(List<string> message);
+        Task WatchDogBarked(int barkNo);
     }
 
 
