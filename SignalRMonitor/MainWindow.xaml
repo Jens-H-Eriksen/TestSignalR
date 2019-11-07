@@ -10,28 +10,23 @@
 
         <ListBox x:Name="ReceiveListBox"  HorizontalAlignment="Left" Height="378" Margin="40,10,0,0" VerticalAlignment="Top" Width="385"/>
 
-        <GroupBox Header="Invoke Broadcast" HorizontalAlignment="Left" Height="120" Margin="457,253,0,0" VerticalAlignment="Top" Width="299">
-            <Canvas>
+        <GroupBox Header="Invoke Broadcast" HorizontalAlignment="Left" Height="120" Margin="461,268,0,0" VerticalAlignment="Top" Width="295">
+            <Canvas RenderTransformOrigin="0.487,0.526">
                 <TextBox x:Name="SendTextBox" HorizontalAlignment="Left" Height="23" TextWrapping="Wrap" VerticalAlignment="Top" Width="255" Canvas.Left="22" Canvas.Top="28"/>
                 <Button x:Name="SendButton"  Content="Send" HorizontalAlignment="Left"  VerticalAlignment="Top" Width="104" Height="32" Click="SendButton_Click" Canvas.Left="173" Canvas.Top="56"/>
             </Canvas>
         </GroupBox>
 
 
-        <GroupBox Header="Broadcasting" HorizontalAlignment="Left" Height="76" Margin="457,10,0,0" VerticalAlignment="Top" Width="299">
+        <GroupBox Header="Broadcasting" HorizontalAlignment="Left" Height="76" Margin="461,10,0,0" VerticalAlignment="Top" Width="295">
             <Label  x:Name="WatchdogLabel" Content="WatchDog: " Height="32" Margin="110,8,0,9"/>
         </GroupBox>
 
-        <GroupBox Header="Get" HorizontalAlignment="Left" Height="103" Margin="461,123,0,0" VerticalAlignment="Top" Width="295" RenderTransformOrigin="0.5,0.5">
-            <GroupBox.RenderTransform>
-                <TransformGroup>
-                    <ScaleTransform/>
-                    <SkewTransform AngleY="0.474"/>
-                    <RotateTransform/>
-                    <TranslateTransform Y="-1.117"/>
-                </TransformGroup>
-            </GroupBox.RenderTransform>
-            <Button x:Name="MakeNumberButton"  Content="Make a number" HorizontalAlignment="Left" VerticalAlignment="Top" Width="104" Height="32" Click="MakeNumberButton_Click" Margin="172,41,0,0"/>
+        <GroupBox Header="Get" HorizontalAlignment="Left" Height="78" Margin="461,96,0,0" VerticalAlignment="Top" Width="295" RenderTransformOrigin="0.5,0.5">
+            <Button x:Name="MakeNumberButton"  Content="Make a number" HorizontalAlignment="Left" VerticalAlignment="Top" Width="104" Height="32" Click="MakeNumberButton_Click" Margin="168,10,0,0" RenderTransformOrigin="0.514,1.045"/>
+        </GroupBox>
+        <GroupBox Header="Get longrunning Async" HorizontalAlignment="Left" Height="78" Margin="461,185,0,0" VerticalAlignment="Top" Width="295" RenderTransformOrigin="0.5,0.5">
+            <Button x:Name="LongRunButton"  Content="wait for it" HorizontalAlignment="Left" VerticalAlignment="Top" Width="104" Height="32" Click="LongRunningButton_Click" Margin="168,10,0,0" RenderTransformOrigin="0.514,1.045"/>
         </GroupBox>
     </Grid>
 </Window>

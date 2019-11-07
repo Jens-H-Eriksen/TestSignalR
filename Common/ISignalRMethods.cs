@@ -1,4 +1,5 @@
 ﻿using System.Collections.Generic;
+using System.Threading.Tasks;
 
 namespace Common
 {
@@ -13,6 +14,9 @@ namespace Common
     {
         void DetermineLength(string message);
         int MakeANumber();
+        Task<string> LongRunningMethod();
+
+
     }
 
 
@@ -21,7 +25,8 @@ namespace Common
         public static class ServerMethods
         {
             public static string DetermineLen => nameof(ISignalRServerMethods.DetermineLength);
-            public static string GivEtNr => nameof(ISignalRServerMethods.MakeANumber);
+            public static string MakeAnumber => nameof(ISignalRServerMethods.MakeANumber);
+            public static string LongRunning => nameof(ISignalRServerMethods.LongRunningMethod);
         }
 
         public static class ClientEvents

@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Threading.Tasks;
 using System.Windows;
 using Common;
 using Microsoft.AspNet.SignalR.Client;
@@ -63,19 +64,26 @@ namespace SignalRMonitor
         }
 
       
-        private void SendButton_Click(object sender, RoutedEventArgs e)
+        private async void SendButton_Click(object sender, RoutedEventArgs e)
         {
             var txtLine = SendTextBox.Text;
       
-            _testHubProxy.Invoke(SignalR.ServerMethods.DetermineLen, txtLine).Wait();
+            await _testHubProxy.Invoke(SignalR.ServerMethods.DetermineLen, txtLine);
         }
 
 
-        private void MakeNumberButton_Click(object sender, RoutedEventArgs e)
+        private async void MakeNumberButton_Click(object sender, RoutedEventArgs e)
         {
-            var nr = _testHubProxy.Invoke<int>(SignalR.ServerMethods.GivEtNr).Result;
+            var nr = await _testHubProxy.Invoke<int>(SignalR.ServerMethods.MakeAnumber);
 
             Dispatcher?.BeginInvoke(new Action(() => ReceiveListBox.Items.Add($"You've got number {nr}")));
+        }
+
+        private async void LongRunningButton_Click(object sender, RoutedEventArgs e)
+        {
+            var msg =  await _testHubProxy.Invoke<string>(SignalR.ServerMethods.LongRunning);
+
+            Dispatcher?.BeginInvoke(new Action(() => ReceiveListBox.Items.Add(msg)));
         }
     }
 }
