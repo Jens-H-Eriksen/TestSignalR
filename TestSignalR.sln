@@ -1,0 +1,37 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.28307.852
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SignalRHub", "Hub\SignalRHub.csproj", "{FE61C0D1-94D7-412A-845F-827DFBF79CAA}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SignalRMonitor", "SignalRMonitor\SignalRMonitor.csproj", "{C24BC62D-8E9E-43BF-BD4D-51A7379AF538}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Common", "Common\Common.csproj", "{9AC17055-FB55-4DC0-9712-3DBF21153EAA}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{FE61C0D1-94D7-412A-845F-827DFBF79CAA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FE61C0D1-94D7-412A-845F-827DFBF79CAA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FE61C0D1-94D7-412A-845F-827DFBF79CAA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FE61C0D1-94D7-412A-845F-827DFBF79CAA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C24BC62D-8E9E-43BF-BD4D-51A7379AF538}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C24BC62D-8E9E-43BF-BD4D-51A7379AF538}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C24BC62D-8E9E-43BF-BD4D-51A7379AF538}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C24BC62D-8E9E-43BF-BD4D-51A7379AF538}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9AC17055-FB55-4DC0-9712-3DBF21153EAA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9AC17055-FB55-4DC0-9712-3DBF21153EAA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9AC17055-FB55-4DC0-9712-3DBF21153EAA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9AC17055-FB55-4DC0-9712-3DBF21153EAA}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {1686FEBC-6839-4D9F-9D8A-89C2990A9591}
+	EndGlobalSection
+EndGlobal
